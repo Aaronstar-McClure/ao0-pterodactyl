@@ -2,9 +2,9 @@ FROM ubuntu:16.04
 
 MAINTAINER Aaronstar, <jfeldt19@gmail.com>
 
-RUN apt-get update \
-    && apt-get upgrade \
-    && apt-get install curl ca-certificates openssl git tar bash sqlite \
+RUN apt-get -y update \
+    && apt-get -y upgrade \
+    && apt-get -y install curl ca-certificates openssl git tar bash sqlite \
     && adduser -D -h /home/container container
 
 USER        container
